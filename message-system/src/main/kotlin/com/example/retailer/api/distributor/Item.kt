@@ -1,13 +1,18 @@
 package com.example.retailer.api.distributor
 
+import javax.persistence.*
+
 /**
  * Описание товара
  */
-data class Item(
+@Entity
+@Table(name = "items")
+data class Item (
     /**
      * Произвольный идентификатор
      */
-    val id: Long,
+    @Id
+    val id: Long? = null,
 
     /**
      * Произвольное название
